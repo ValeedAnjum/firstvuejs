@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>First Vue.js Project</title>
 </head>
 <body>
-
+    <div id="app">
+        <img :class="gender" :src="picture" :alt="`${fname} ${lname}`" />
+        <h1>{{fname}} {{lname}}</h1>
+        <h3>Email:{{email}}</h3>
+        <button v-on:click="getUser()">Get Random User</button>
+    </div>
     <script src="https://unpkg.com/vue@3.0.5"></script>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
